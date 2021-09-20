@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_menu">
+
+    <fragment
+        android:id="@+id/navigation_acount"
+        android:name="com.example.trenirovka_worldskills_1.ui.AcountFragment"
+        tools:layout="@layout/fragment_acount" />
+
+    <fragment
+        android:id="@+id/navigation_menu"
+        android:name="com.example.trenirovka_worldskills_1.ui.MenuFragment"
+        tools:layout="@layout/fragment_menu">
+        <action
+            android:id="@+id/action_navigation_menu_to_restoranFragment"
+            app:destination="@id/restoranFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_cart"
+        android:name="com.example.trenirovka_worldskills_1.ui.CartFragment"
+        tools:layout="@layout/fragment_cart" />
+    <fragment
+        android:id="@+id/restoranFragment"
+        android:name="com.example.trenirovka_worldskills_1.ui.RestoranFragment"
+        android:label="fragment_restoran"
+        tools:layout="@layout/fragment_restoran" />
+</navigation>
